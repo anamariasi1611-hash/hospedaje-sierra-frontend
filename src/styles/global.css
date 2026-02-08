@@ -1,0 +1,395 @@
+/* ==========================================================================
+   GLOBAL BASE
+   ========================================================================== */
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* ==========================================================================
+   BOTONES NARANJA (reutilizables)
+   ========================================================================== */
+.btn-orange,
+.btn-registrar {
+    background-color: #f97316 !important;
+    color: white !important;
+    border: none !important;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+}
+
+.btn-orange:hover,
+.btn-registrar:hover {
+    background-color: #ea580c !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+}
+
+.btn-orange:disabled {
+    opacity: 0.7;
+}
+
+.btn-registrar {
+    border-radius: 50px;
+    padding: 12px 40px;
+    font-size: 1.1rem;
+}
+
+.btn-outline-orange {
+    border: 2px solid #f97316;
+    color: #f97316;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline-orange:hover {
+    background-color: #f97316;
+    color: white;
+}
+
+.text-orange {
+    color: #f97316;
+}
+
+/* ==========================================================================
+   PÁGINAS PÚBLICAS: LOGIN / REGISTER
+   ========================================================================== */
+.left-panel {
+    background-color: #12264A;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.left-panel img {
+    max-width: 200px;
+    margin-bottom: 1.5rem;
+}
+
+.left-panel p {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* ==========================================================================
+   LOGO ABSOLUTO
+   ========================================================================== */
+.absolute-logo {
+    position: absolute;
+    height: 140px;
+}
+
+/* ==========================================================================
+   DASHBOARD HEADER
+   ========================================================================== */
+.dashboard-header {
+    background: linear-gradient(135deg, #12264A 0%, #0a1b3a 100%);
+    color: white;
+    padding: 1rem 20rem;
+    min-height: 80px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: relative;
+}
+
+.dashboard-header .header-text {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+}
+
+.dashboard-header h4 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.dashboard-header h4 small {
+    display: block;
+    font-size: 1.05rem;
+    color: #b3e5fc;
+    font-weight: normal;
+    margin-top: 6px;
+}
+
+.dashboard-header .btn-logout {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.6rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.dashboard-header .btn-logout:hover {
+    background: #f97316;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+}
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+.sidebar {
+    background-color: #12264A;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    padding-top: 90px !important;
+    width: 260px;
+    transition: all 0.3s;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.9rem 1.2rem;
+    margin: 0.5rem 0;
+    border-radius: 10px;
+    transition: all 0.3s;
+    font-weight: 500;
+    text-align: center;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #f97316;
+    transform: translateX(8px);
+}
+
+/* ==========================================================================
+   CARDS Y CONTENEDORES
+   ========================================================================== */
+.main-guest-card {
+    border: 3px solid #f97316;
+    border-radius: 30px;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15);
+    height: 100%;
+}
+
+.side-card {
+    background: white;
+    border-radius: 24px;
+    padding: 3.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.side-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(249, 115, 22, 0.25);
+}
+
+.side-card i {
+    font-size: 7rem;
+    color: #f97316;
+    margin-bottom: 1.5rem;
+}
+
+.side-card h4 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+/* Gradiente sutil */
+.bg-gradient-orange-light {
+    background: linear-gradient(135deg, #fff5eb 0%, #ffe8d1 100%);
+}
+
+/* Efectos generales */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ==========================================================================
+   CALENDARIO
+   ========================================================================== */
+.calendar-container {
+    max-width: 380px !important;
+    margin: 0 auto;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.day-today,
+.today {
+    background-color: #f97316 !important;
+    color: white !important;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.day-selected,
+.selected {
+    background-color: #fed7aa !important;
+    color: #f97316 !important;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.calendar-day {
+    transition: all 0.2s;
+}
+
+.calendar-day:hover {
+    background-color: #f8f9fa;
+    border-radius: 50%;
+}
+
+/* ==========================================================================
+   RESPONSIVE – MEDIA QUERIES
+   ========================================================================== */
+
+/* ≤ 992px (tablets / landscape) */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 1rem 0 !important;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        background-color: #0f1e3a;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .sidebar a {
+        flex: 1 1 120px;
+        min-width: 100px;
+        padding: 0.9rem 0.5rem;
+        margin: 0;
+        font-size: 0.95rem;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+        transform: none;
+    }
+
+    .dashboard-header {
+        padding: 1rem 2rem;
+        justify-content: center;
+    }
+
+    .dashboard-header .header-text {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .absolute-logo {
+        height: 80px;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+/* ≤ 768px (tablets portrait / móviles grandes) */
+@media (max-width: 768px) {
+    .left-panel {
+        padding: 3rem 1.5rem;
+    }
+
+    .left-panel img {
+        max-width: 180px;
+    }
+
+    .left-panel p {
+        font-size: 20px;
+    }
+
+    .dashboard-header {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dashboard-header h4 {
+        font-size: 1.4rem;
+    }
+
+    .side-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .side-card i {
+        font-size: 6rem;
+    }
+
+    .main-guest-card {
+        padding: 1.5rem;
+    }
+}
+
+/* ≤ 576px (móviles pequeños) */
+@media (max-width: 576px) {
+    .left-panel {
+        padding: 2rem 1rem;
+    }
+
+    .left-panel p {
+        font-size: 18px;
+    }
+
+    .dashboard-header h4 {
+        font-size: 1.15rem;
+    }
+
+    .btn-registrar,
+    .btn-orange {
+        font-size: 1rem;
+        padding: 12px 20px !important;
+        width: 100%;
+    }
+
+    .btn-outline-orange {
+        width: 36px;
+        height: 36px;
+        font-size: 1.5rem;
+    }
+
+    .side-card i {
+        font-size: 5rem;
+    }
+
+    .main-guest-card {
+        padding: 1rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    .calendar-container {
+        max-width: 100% !important;
+    }
+}
