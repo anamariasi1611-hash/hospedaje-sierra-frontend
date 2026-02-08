@@ -1,3 +1,54 @@
+# Ignora node_modules (lo más grande – regenera con npm install)
 node_modules/
-.env
+
+# Ignora build/dist (artifacts de vite build – genera en deploy)
 dist/
+build/
+
+# Ignora caches y logs de Vite/React
+.cache/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Ignora env files sensibles (creds, API URLs, secrets)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Sube .env.example con placeholders para guiar usuarios
+
+# Ignora IDE/Editor files
+.idea/          # IntelliJ/VS Code Android Studio
+.vscode/        # VS Code settings
+*.sublime-*     # Sublime
+.DS_Store       # Mac OS
+Thumbs.db       # Windows
+
+# Ignora temp y OS files
+temp/
+tmp/
+*.tmp
+*.swp
+*.swo
+
+# Ignora coverage y tests locales si usas Jest/Vitest
+coverage/
+*.lcov
+
+# Ignora lock files si quieres (opcional – algunos prefieren commitear para consistencia)
+# package-lock.json  # npm
+# yarn.lock          # yarn
+# pnpm-lock.yaml     # pnpm
+# Recomiendo commitear lock para versiones exactas – quita si prefieres ignorar
+
+# Ignora uploads locales si tienes folder para imágenes/testing
+uploads/
+public/uploads/  # Si subes files en dev
+
+# Ignora ESLint/Prettier cache (opcional)
+.eslintcache
+.prettiercache
